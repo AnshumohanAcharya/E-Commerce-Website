@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+        <!-- CSS Stylessheets -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/8a324bbd32.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="home.html"><img class="logo" src="img/logo2.jpg" alt=""></a>
+            <div class="division">
+                <ul id="navbar">
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="shop.html">Shop</a>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li id="lg-bag">
+                        <a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    </li>
+                    <a href="" id="close"><i class="fa-solid fa-xmark"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                <div class="container">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <!-- <i id="bar" class="fas fa-outdent"></i> -->
+            </div>
+        </section>
+
+        <section id="page-header" class="about-header">
+            <h2>#cart</h2>
+            <p>Add your coupon code & SAVE upto 70%</p>
+        </section>
+
+        <section id="cart" class="section-p1">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="img/products/f1.jpg" alt=""></td>
+                        <td>Cartoon Astronaut T-Shirts</td>
+                        <td>Rs. 5600</td>
+                        <td><input type="number" id="qty" value="0" min="0" max="5" onchange="Change()"></td>
+                        <td id="fp">Rs.0</td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="img/products/f2.jpg" alt=""></td>
+                        <td>Cartoon Astronaut T-Shirts</td>
+                        <td>Rs. 5600</td>
+                        <td><input type="number" id="qty1" value="0" min="0" max="5" onchange="Change()"></td>
+                        <td id="fp1">Rs.0</td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="img/products/f3.jpg" alt=""></td>
+                        <td>Cartoon Astronaut T-Shirts</td>
+                        <td>Rs. 5600</td>
+                        <td><input type="number" id="qty2" value="0" min="0" max="5" onchange="Change()"></td>
+                        <td id="fp2">Rs.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="cart-add" class="section-p1">
+            <div id="coupon">
+                <h3>Apply Coupon</h3>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Apply</button>
+            </div>
+            <div id="subtotal">
+                <h3>Cart Total</h3>
+                <table>
+                    <tr>
+                        <td>Cart Subtotal</td>
+                        <td><span id="cart_sub">Rs.0</span></td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td><span id="shipping">Rs.0</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong><span id="total">Rs.0</span></strong></td>
+                    </tr>
+                </table>
+                <a href="#payment_gateway"><button class="normal">Proceed to checkout</button></a>
+            </div>
+        </section>
+
+        <section id="payment_gateway">
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">Billing Address</h3>
+                            <div class="inputBox">
+                                <span>Full name : </span>
+                                <input type="text" placeholder="Anshumohan Acharya">
+                            </div>
+                            <div class="inputBox">
+                                <span>Email :</span>
+                                <input type="email" placeholder="example@example.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>Address : </span>
+                                <input type="text" placeholder="Room-Street-Locality">
+                            </div>
+                            <div class="inputBox">
+                                <span>City :</span>
+                                <input type="text" placeholder="Kolkata">
+                            </div>
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>State :</span>
+                                    <input type="text" placeholder="West Bengal">
+                                </div>
+                                <div class="inputBox">
+                                    <span>Zip Code :</span>
+                                    <input type="text" placeholder="123 456">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <h3 class="title">Payment</h3>
+                            <div class="inputBox">
+                                <span>Cards Accepted :</span>
+                                <img src="img/pay/pay.png" alt="">
+                            </div>
+                            <div class="inputBox">
+                                <span>Name on Card: </span>
+                                <input type="text" placeholder="Mr. Anshumohan Acharya">
+                            </div>
+                            <div class="inputBox">
+                                <span>Credit Card number :</span>
+                                <input type="email" placeholder="1111-2222-3333-4444">
+                            </div>
+                            <div class="inputBox">
+                                <span>Expiry Month : </span>
+                                <input type="text" placeholder="January">
+                            </div>
+                            <div class="inputBox">
+                                <span>City :</span>
+                                <input type="text" placeholder="Kolkata">
+                            </div>
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Expiry Year :</span>
+                                    <input type="number" placeholder="2022">
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV :</span>
+                                    <input type="text" placeholder="123 456">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Proceed To Checkout" class="submit-btn">
+                </form>
+            </div>
+        </section>
+
+        <section id="newsletter" class="section-p1 section-m1">
+            <div class="newstext">
+                <h4>Sign Up for Newsletters</h4>
+                <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logos" src="img/logo2.jpg" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong> MG Road , Street 10 , Kolkata</p>
+                <p><strong>Phone: </strong> (+91) 8639729337 / (+91) 9391628217</p>
+                <p><strong>Hours: </strong> 9:00 - 18:00 , Mon - Sat</p>
+                <h4>Follow Us</h4>
+                <div class="follow">
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-pinterest-p"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="img/pay/app.jpg" alt="">
+                    <img src="img/pay/play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateway</p>
+                <img src="img/pay/pay.png" alt="">
+            </div>
+        </footer>
+
+        <div class="copyright">
+            <p>© 2023, Anshumohan Acharya</p>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+
+</html>
